@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo "switching user to admin"
-sudo su - admin
-whoami
-brew search maven
+export PATH=$PATH:/opt/maven/bin
+
 which mvn
-brew install maven
-which mvn
+
+mvn -version
