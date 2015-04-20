@@ -16,7 +16,11 @@ Vagrant.configure(2) do |config|
  config.ssh.private_key_path = "p:/.ssh/id_rsa"
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provision "shell", inline: "echo hello"
+#config.vm.provision "shell", inline: "export PATH=$PATH:/opt/maven/bin"
+
 config.vm.provision "shell", path: "setup.sh"
+
+#config.vm.provision "shell", inline: "which mvn"
 
  config.vm.provider :vsphere do |vsphere|
     vsphere.host = '49.21.15.148'
