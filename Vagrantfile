@@ -28,8 +28,8 @@ config.vm.provision "shell", path: "setup.sh"
     vsphere.template_name = 'osx_vm_slave2'
     vsphere.clone_from_vm = true
     vsphere.name = 'clone1'
-    vsphere.user = 'root'
-    vsphere.password = 'vagrant'
+    vsphere.user = ''
+    vsphere.password = ''
     vsphere.insecure = true
   end
 
